@@ -44,3 +44,27 @@ matrix sum(matrix a, matrix b)
 
 	return(a);
 }
+
+
+/* product() --- returns the product of two matrices */
+
+matrix product(matrix a, matrix b)
+{
+	assert(a.cols == b.rows);
+
+	int i, j, k;
+	matrix c;
+
+	for (i = 0; i < a.rows; i++) {
+		for (j = 0; j < b.cols; j++) {
+			c.m[i][j] = 0;
+			for (k = 0; k < a.cols; k++)
+				c.m[i][j] += (a.m[i][k] * b.m[k][j]);
+		}
+	}
+
+	c.rows = a.rows;
+	c.cols = b.cols;
+
+	return(c);
+}

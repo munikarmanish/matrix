@@ -14,6 +14,7 @@ int main(void)
 	puts("\nA:"); 	display(a);
 	puts("\n-A:"); display(neg(a));
 	puts("\nA+A:"); display(sum(a, a));
+	puts("\nA*A:"); display(product(a, a));
 
 	return (EXIT_SUCCESS);
 }
