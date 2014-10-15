@@ -4,6 +4,8 @@
 /* randomize() --- returns a random matrix of size n */
 matrix randomize(int rows, int cols)
 {
+	assert(rows <= MAX_SIZE && cols <= MAX_SIZE);
+
 	matrix a;
 	int i, j;
 
