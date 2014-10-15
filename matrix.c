@@ -30,3 +30,17 @@ matrix neg(matrix a)
 	return(a);
 }
 
+
+/* sum() --- returns the sum of two matrices */
+
+matrix sum(matrix a, matrix b)
+{
+	assert(a.rows == b.rows && a.cols == b.cols);
+
+	int i, j;
+	for (i = 0; i < a.rows; i++)
+		for (j = 0; j < a.cols; j++)
+			a.m[i][j] += b.m[i][j];
+
+	return(a);
+}
