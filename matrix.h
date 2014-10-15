@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <assert.h>
+#include <math.h>
 
 #define MAX_SIZE 5 /* Max size is 5*5 */
 
@@ -22,7 +23,8 @@ matrix	randomize(int rows, int cols);
 matrix	sum(matrix a, matrix b);
 matrix	neg(matrix a);
 matrix	product(matrix a, matrix b);
-int 		determinant(matrix a);
+matrix	cofactor(matrix a, int row, int col);
+int 		det(matrix a);
 
 /* File: display.c */
 void		display(matrix a);

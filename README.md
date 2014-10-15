@@ -11,12 +11,14 @@ Current Features
 
 This program currently has following features:
 
-* Matrix initialization
+* Matrix initialization (with random elements)
 * Matrix printing
 * Matrix negation
-* Matrix addition
+* Matrix addition/subtraction
 * Matrix multiplication
-* Matrix determinant (to do)
+* Cofactor matrix
+* Matrix determinant
+* Inverse matrix (to do)
 
 Compilation
 -----------

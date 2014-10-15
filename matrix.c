@@ -1,7 +1,6 @@
 /* Matrix manipulating functions. */
 
-#include "matrix.h"
-
+#include "matrix.h" 
 /* randomize() --- returns a random matrix of size n */
 matrix randomize(int rows, int cols)
 {
@@ -67,4 +66,50 @@ matrix product(matrix a, matrix b)
 	c.cols = b.cols;
 
 	return(c);
+}
+
+
+/* cofactor() --- returns the cofactor matrix */
+
+matrix cofactor(matrix a, int row, int col)
+{
+	assert(row < a.rows && col < a.cols);
+
+	int i, j, ci, cj;
+	matrix c;
+
+	ci = 0;
+	for (i = 0; i < a.rows; i++) {
+		if (i == row) continue;
+		cj = 0;
+		for (j = 0; j < a.cols; j++) {
+			if (j == col) continue;
+			c.m[ci][cj] = a.m[i][j];
+			cj++;
+		}
+		ci++;
+	}
+
+	c.rows = a.rows - 1;
+	c.cols = a.cols - 1;
+	return(c);
+}
+
+
+/* det() --- returns the determinant of the given matrix */
+
+int det(matrix a)
+{
+	assert(a.rows == a.cols);
+	int j;
+
+	if (a.rows == 1) return a.m[0][0]; /* base case */
+
+	int d = 0; /* the determinant */
+
+	for (j = 0; j < a.cols; j++) {
+		d += pow(-1, j) * a.m[0][j] * det(cofactor(a, 0, j));
+	}
+
+	return(d);
 }
