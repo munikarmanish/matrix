@@ -1,0 +1,8 @@
+*.o
+*.exe
+*.so
+*.dll
+*.a
+*.out
+
+matrix
