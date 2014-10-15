@@ -22,6 +22,7 @@ typedef struct _matrix_ matrix;
 matrix	randomize(int rows, int cols);
 matrix	sum(matrix a, matrix b);
 matrix	neg(matrix a);
+matrix	diff(matrix a, matrix b);
 matrix	product(matrix a, matrix b);
 matrix	cofactor(matrix a, int row, int col);
 int 		det(matrix a);

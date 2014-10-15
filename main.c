@@ -20,6 +20,9 @@ int main(void)
 	puts("\nA+A:"); 
 	display(sum(a, a));
 
+	puts("\nA-A:");
+	display(diff(a, a));
+
 	puts("\nA*A:"); 
 	display(product(a, a));
 

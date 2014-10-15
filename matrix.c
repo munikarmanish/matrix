@@ -44,6 +44,11 @@ matrix sum(matrix a, matrix b)
 	return(a);
 }
 
+matrix diff(matrix a, matrix b)
+{
+	return(sum(a, neg(b)));
+}
+
 
 /* product() --- returns the product of two matrices */
 
