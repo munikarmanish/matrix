@@ -120,3 +120,18 @@ int det(matrix a)
 
 	return(d);
 }
+
+
+/* transpose() --- returns the transpose of a matrix */
+
+matrix transpose(matrix a)
+{
+	int i, j;
+	for (i = 0; i < a.rows-1; i++)
+		for (j = i+1; j < a.cols; j++)
+			swapint(&a.m[i][j], &a.m[j][i]);
+
+	swapint(&a.rows, &a.cols);
+
+	return(a);
+}

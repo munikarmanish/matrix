@@ -19,15 +19,19 @@ typedef struct _matrix_ matrix;
 
 
 /* File: matrix.c */
-matrix	randomize(int rows, int cols);
-matrix	sum(matrix a, matrix b);
-matrix	neg(matrix a);
-matrix	diff(matrix a, matrix b);
-matrix	product(matrix a, matrix b);
-matrix	cofactor(matrix a, int row, int col);
-int 		det(matrix a);
+matrix randomize(int rows, int cols);
+matrix sum(matrix a, matrix b);
+matrix neg(matrix a);
+matrix diff(matrix a, matrix b);
+matrix product(matrix a, matrix b);
+matrix cofactor(matrix a, int row, int col);
+int det(matrix a);
+matrix transpose(matrix a);
 
 /* File: display.c */
-void		display(matrix a);
+void display(matrix a);
+
+/* File: util.c */
+void swapint(int* a, int* b);
 
 #endif

@@ -18,6 +18,7 @@ This program currently has following features:
 * Matrix multiplication
 * Cofactor matrix
 * Matrix determinant
+* Transpose of matrix
 * Inverse matrix (to do)
 
 Compilation

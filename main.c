@@ -26,10 +26,13 @@ int main(void)
 	puts("\nA*A:"); 
 	display(product(a, a));
 
-	puts("\nCof(A, 1, 1):");
-	display(cofactor(a, 1, 1));
+	puts("\nCof(A, 0, 0):");
+	display(cofactor(a, 0, 0));
 
 	printf("\nDet(A) = %d\n", det(a));
+
+	puts("\nTranspose(A):");
+	display(transpose(a));
 
 	return (EXIT_SUCCESS);
 }
