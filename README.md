@@ -3,8 +3,8 @@ matrix
 
 This is a C program that plays with matrix calculations.
 
-Right now, it only supports integer matrices. But I will
-upgrade it to support float matrices soon.
+Now, it supports matrices with real numbers (instead of just
+integers).
 
 Current Features
 ----------------

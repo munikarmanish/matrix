@@ -11,7 +11,7 @@ matrix randomize(int rows, int cols)
 
 	for (i = 0; i < rows; i++)
 		for (j = 0; j < cols; j++)
-			a.m[i][j] = rand() % 10;
+			a.m[i][j] = (rand() % 100) / 10.0;
 
 	a.rows = rows;
 	a.cols = cols;
@@ -88,9 +88,11 @@ matrix cofactor(matrix a, int row, int col)
 	ci = 0;
 	for (i = 0; i < a.rows; i++) {
 		if (i == row) continue;
+
 		cj = 0;
 		for (j = 0; j < a.cols; j++) {
 			if (j == col) continue;
+
 			c.m[ci][cj] = a.m[i][j];
 			cj++;
 		}
@@ -105,14 +107,14 @@ matrix cofactor(matrix a, int row, int col)
 
 /* det() --- returns the determinant of the given matrix */
 
-int det(matrix a)
+float det(matrix a)
 {
 	assert(a.rows == a.cols);
 	int j;
 
 	if (a.rows == 1) return a.m[0][0]; /* base case */
 
-	int d = 0; /* the determinant */
+	float d = 0; /* the determinant */
 
 	for (j = 0; j < a.cols; j++) {
 		d += pow(-1, j) * a.m[0][j] * det(cofactor(a, 0, j));
@@ -129,7 +131,7 @@ matrix transpose(matrix a)
 	int i, j;
 	for (i = 0; i < a.rows-1; i++)
 		for (j = i+1; j < a.cols; j++)
-			swapint(&a.m[i][j], &a.m[j][i]);
+			swapfloat(&a.m[i][j], &a.m[j][i]);
 
 	swapint(&a.rows, &a.cols);
 

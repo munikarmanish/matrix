@@ -9,7 +9,7 @@ void display(matrix a)
 	for (i = 0; i < a.rows; i++) {
 		printf(" [");
 		for (j = 0; j < a.cols; j++)
-			printf("%4d", a.m[i][j]);
+			printf("%6.2f", a.m[i][j]);
 		printf(" ]\n");
 	}
 }

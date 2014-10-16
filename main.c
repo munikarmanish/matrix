@@ -29,7 +29,7 @@ int main(void)
 	puts("\nCof(A, 0, 0):");
 	display(cofactor(a, 0, 0));
 
-	printf("\nDet(A) = %d\n", det(a));
+	printf("\nDet(A) = %.2f\n", det(a));
 
 	puts("\nTranspose(A):");
 	display(transpose(a));

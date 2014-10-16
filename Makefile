@@ -6,13 +6,15 @@ LIBS = -lm
 
 CFILES = *.c
 HFILE = matrix.h
-EXE = matrix
+OUTDIR = .
+EXE = $(OUTDIR)/matrix
 
 ### Rules
 
 $(EXE): $(CFILES) $(HFILE)
 	@$(CC) $(CFLAGS) $(CFILES) -o $(EXE) $(LIBS)
-	@echo "Compilation Successful. Executable: $(EXE)"
+	@echo "Compilation Successful."
+	@echo "Executable created: $(EXE)"
 
 all: $(EXE)
 

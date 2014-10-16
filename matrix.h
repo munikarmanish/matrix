@@ -10,7 +10,7 @@
 #define MAX_SIZE 5 /* Max size is 5*5 */
 
 struct _matrix_ {
-	int m[MAX_SIZE][MAX_SIZE];
+	float m[MAX_SIZE][MAX_SIZE];
 	int rows;
 	int cols;
 }; 
@@ -25,7 +25,7 @@ matrix neg(matrix a);
 matrix diff(matrix a, matrix b);
 matrix product(matrix a, matrix b);
 matrix cofactor(matrix a, int row, int col);
-int det(matrix a);
+float det(matrix a);
 matrix transpose(matrix a);
 
 /* File: display.c */
@@ -33,5 +33,6 @@ void display(matrix a);
 
 /* File: util.c */
 void swapint(int* a, int* b);
+void swapfloat(float* a, float* b);
 
 #endif
